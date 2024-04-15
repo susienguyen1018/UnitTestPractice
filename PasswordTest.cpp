@@ -49,4 +49,17 @@ TEST(PasswordTest, allUppercase) {
     ASSERT_FALSE(actual);
 }
 
+TEST(PasswordTest, mixCase) {
+    Password my_password;
+    bool actual = my_password.has_mixed_case("Zz");
+    ASSERT_TRUE(actual);
+}
+
+TEST(PasswordTest, allLowerCase) {
+    Password my_password;
+    bool actual = my_password.has_mixed_case("cz");
+    ASSERT_FALSE(actual);
+}
+
+
 
